@@ -7,7 +7,9 @@ const secretKey = process.env.CLIENT_SECRET;
 
 const base64 = Buffer.from(`${clientId}:${secretKey}`).toString('base64');
 
+// Interswitch url
 const url = `https://qa.interswitchng.com/passport/oauth/token`;
+
 
 const response = await axios.post(url, undefined, {
     params: {
